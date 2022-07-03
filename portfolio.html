@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="dedescription" content="Разработка сайтов любой сложности" />
+    <title> WebStudio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet" />
+</head>
+
+<body>    
+    <!--Шапка-->    
+    <header>
+        <nav>
+            <!--Лого-->
+            <a class="logo" href="index.html"> <span class="logo-accent">Web</span>Studio</a>
+            <!--Основная навигация-->
+            <ul class="site-nav">
+                <li><a class="site-nav-list" href="index.html">Студия</a></li>
+                <li><a class="site-nav-list current" href="./portfolio.html">Портфолио</a></li>
+                <li><a class="site-nav-list" href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <!--Блок контактов-->
+        <ul class="contact-nav">
+            <li><a class="contact-nav-list" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a class="contact-nav-list" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        </ul>
+    </header>
+    <!--Основной контент-->
+    <main>
+        <!-- Портфолио -->
+        <section>
+            <h1>Портфолио</h1>
+            <!-- Фильтр выбора -->
+            <ul class="clean-list">
+                <li><button class="button primary" type="button">Все</button></li>
+                <li><button class="button primary" type="button">Веб-сайты</button></li>
+                <li><button class="button primary" type="button">Приложения</button></li>
+                <li><button class="button primary" type="button">Дизайн</button></li>
+                <li><button class="button primary" type="button">Маркетинг</button></li>
+            </ul>
+            <!-- Контент -->
+            <ul class="worklist clean-list">
+                <li>
+                    <img src="./img/pr1.jpg" alt="Экран ноутбука с карточками людей" width="370" height="294">
+                    <h2 class="worklist-title">Технокряк</h2>
+                    <p>Веб-сайт</p>
+                </li>
+                <li>
+                     <img src="./img/pr2.jpg" alt="Стилизованная иллюстрация двух баскетбалистов борющихся за мяч"  width="370" height="294">
+                    <h2 class="worklist-title">Постер New Orlean vs Golden Star</h2>
+                    <p>Дизайн</p>
+                </li>
+                <li>
+                    <img src="./img/pr3.jpg" alt="Логотип ресторана Seafood"  width="370" height="294">
+                    <h2 class="worklist-title">Ресторан Seafood</h2>
+                    <p>Приложение</p>
+                </li>
+                <li>
+                    <img src="./img/pr4.jpg" alt="Накладные наушники черного цвета"  width="370" height="294">
+                    <h2 class="worklist-title">Проект Prime</h2>
+                    <p>Маркетинг</p>
+                </li>
+                <li>
+                    <img src="./img/pr5.jpg" alt="Две коробки с надписями сверху, белая большая и коричневая маленькая"  width="370" height="294">
+                    <h2 class="worklist-title">Проект Boxes</h2>
+                    <p>Приложение</p>
+                </li>
+                <li>
+                    <img src="./img/pr6.jpg" alt="Экран монитора с меню сайта на черном фоне белым шрифтом"  width="370" height="294">
+                    <h2 class="worklist-title">Inspiration has no Borders</h2>
+                    <p>Веб-сайт</p>
+                </li>
+                <li>
+                    <img src="./img/pr7.jpg" alt="Разворот глянцевого журнала с тримя фотографиями и текстом"  width="370" height="294">
+                    <h2 class="worklist-title">Издание Limited Edition</h2>
+                    <p>Дизайн</p>
+                </li>
+                <li>
+                    <img src="./img/pr8.jpg" alt="Ярлык товара с логотипом"  width="370" height="294">
+                    <h2 class="worklist-title">Проект LAB</h2>
+                    <p>Маркетинг</p>
+                </li>
+                <li>
+                    <img src="./img/pr9.jpg" alt="Ноутбук на столе с руками на клавиатуре и страницей сайта о бизнесе на экране"  width="370" height="294">
+                    <h2 class="worklist-title">Growing Business</h2>
+                    <p>Приложение</p>
+                </li>
+            </ul>
+        </section>       
+    </main>
+    <!--Подвал-->
+    <footer class="footer">
+        <!--Лого-->
+        <a class="logo clean-link" href="index.html"><span class="logo-accent">Web</span>Studio</a>
+        <!--Контакты-->
+        <address>
+            <ul id="contacts" class="footer-adress">
+                <li><a class="footer-adress-list" href="https://goo.gl/maps/bL18XimWbJK8uWrq5" target="_blank">г. Киев, пр-т
+                        Леси Украинки, 26</a></li>
+                <li><a class="footer-adress-list" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li><a class="footer-adress-list" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+        </address>
+    </footer>
+    </body>    
+    </html>
