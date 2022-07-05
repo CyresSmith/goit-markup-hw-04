@@ -7,6 +7,7 @@
     --textcolor: #757575;
     --secondtextcolor:#212121;    
     --accentcolor:#2196F3;
+    --card-set-gap: 30px; 
 }
 
 /* Глобальные стили */
@@ -18,7 +19,32 @@ body {
     font-size: 14px;
 }
 
+.container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+}
+
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Шапка */
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
 
 .clean-list {
     list-style: none;
@@ -27,14 +53,29 @@ body {
     text-decoration: none;
 }
 
+.main-nav {
+    display: flex;
+    align-items: center
+    
+}
+
+nav {
+    display: flex;
+    align-items: center
+}
+
 .logo {
-    color:#000000;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 25px;    
+    color:#000000;    
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1,19;
     letter-spacing: 0.03em;
     text-decoration: none;
+    
 }
 
 .logo-accent {
@@ -44,7 +85,18 @@ body {
 /* Навигация */
 
 .site-nav {
+    display: flex;    
     list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 93px;
+}
+
+.site-nav li:not(:last-child) {
+    margin-right: 50px;
+    display: block;
 }
 
 .site-nav-list{
@@ -65,18 +117,28 @@ body {
 }
 
 .contact-nav {
-    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: 0px;
+    padding: 0px;
+    list-style: none;    
+}
+
+.contact-nav li:not(:last-child) {
+    margin-right: 50px;
 }
 
 .contact-nav-list {
+    display: block;    
     color: #757575;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;    
 }
-
-
 
 .contact-nav-list:hover,
 .contact-nav-list:focus {
@@ -90,7 +152,11 @@ body {
 .hero {
     color: ;
     background-color: var(--secondbgcolor);
-    letter-spacing: 0.06em
+    letter-spacing: 0.06em;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+        
 }
 
 .hero-title {
@@ -98,15 +164,38 @@ body {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;    
-    text-transform: uppercase;
-    text-align: center;
+    text-transform: uppercase;    
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+    padding-left: 31px;
+    padding-right: 35px;
 }
 
 /* Секция отличия */
 
+.differences, .portfolio {
+    display: none;
+}
+
 .differences-list {
-    line-height: 1.17;
+    display: flex;
+    line-height: 1.71;
     letter-spacing: 0.03em;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 94px;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.differences-list li {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: calc(var(--card-set-gap));
+    margin-top: calc(var(--card-set-gap));
 }
 
 .differences-title {
@@ -116,7 +205,13 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
     }
+
+.differences-list p {
+    margin-top: 10px;
+}
 
 /* Секция чем занимаемся */
 
@@ -126,8 +221,24 @@ body {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
-    text-align: center;
-    
+    text-align: center;    
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.activity-list {
+    display: flex;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.activity-list li {
+    flex-basis: calc((100%-60)/3);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 
 /* Секция команда */
@@ -137,27 +248,77 @@ body {
 }
 
 .team-list {
+    display: flex;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-bottom: 0px;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
 }
 
-.team-title {
+.team-list-card {
+    flex-basis: calc(100%/4 - var(--card-set-gap));
+    background-color: var(--white);
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    box-shadow:
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-card-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
     color: var(--secondtextcolor);
+    margin-top: var(--card-set-gap);
+    margin-bottom: 0px;
+}
+
+.team-card-text {
+    margin-top: 10px;
+    margin-bottom: var(--card-set-gap);
 }
 
 /* Футер */
 
+.logo.footer {
+    color: var(--white);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: normal;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .footer {
     background-color: var(--secondbgcolor);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+address {
+    padding-top: 20px;
 }
 
 .footer-adress {
     list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.footer-adress li:not(:first-child) {
+    padding-top:9px;
+    padding-bottom: 0px;
 }
 
 .footer-adress-list {
@@ -165,7 +326,9 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;   
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .footer-adress-list:hover,
@@ -175,26 +338,68 @@ body {
 
 /* Портфолио */
 
-/* Примері работ */
+/* Фильтр выбора */
+
+.portfolio-list {
+    display: flex;    
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0px;
+}
+
+.portfolio-list li:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* Примеры работ */
 
 .worklist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-bottom: 0px;
+    padding: 0px;    
     font-size: 16px;
     line-height: 1.87;
 }
 
-.worklist-title {
+.worklist>.worklist-card {    
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+}
+
+.worklist-card-content {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
+
+.worklist-card-title {
     color: var(--secondtextcolor);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
 }
+
+.worklist-card-text {
+    margin: 0px;
+}
+
 
 /*Кнопка*/
 
 .button {
     cursor: pointer;
     font-family: inherit;
+    border: 0px;
+    border-radius: 4px;
 }
 
 .button.hero {
@@ -203,18 +408,34 @@ body {
     line-height: 1.87;
     letter-spacing: 0.06em;
     background-color: var(--accentcolor);
-    color: var(--white);    
+    color: var(--white);
+    display: block;
+    min-width: 200px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button.primary {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    
 }
 
 .button.primary:hover,
 .button.primary:focus {
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--white);
-    background-color: var(--accentcolor)
+    background-color: var(--accentcolor)    
 }
 
