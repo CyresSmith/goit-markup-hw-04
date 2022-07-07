@@ -12,6 +12,16 @@
 
 /* Глобальные стили */
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
 body {
     color:var(--textcolor);
     background-color:var(--white);
@@ -20,8 +30,6 @@ body {
 }
 
 .container {
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -29,7 +37,7 @@ body {
     width: 1200px;
 }
 
-section {
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -66,13 +74,13 @@ nav {
 
 .logo {
     display: block;
-    margin-top: 24px;
-    margin-bottom: 25px;    
+    padding-top: 24px;
+    padding-bottom: 25px;    
     color:#000000;    
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
-    line-height: 1,19;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
     
@@ -89,59 +97,53 @@ nav {
     list-style: none;
     padding: 0px;
     margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    margin-right: 0px;item margin-bottom: 0px;
     margin-left: 93px;
 }
 
-.site-nav li:not(:last-child) {
+.site-nav-item:not(:last-child) {
     margin-right: 50px;
-    display: block;
 }
 
-.site-nav-list{
-    color:var(--secondtextcolor);
+.site-nav-item-text {
+    color: var(--secondtextcolor);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
 
-.site-nav-list:hover,
-.site-nav-list:focus {
+.site-nav-item-text:hover,
+.site-nav-item-text:focus {
     color: var(--accentcolor);
 }
 
-.site-nav-list.current {
+.site-nav-item-text.current {
     color: var(--accentcolor);
 }
 
 .contact-nav {
     display: flex;
     align-items: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-left: auto;
-    margin-right: 0px;
-    padding: 0px;
     list-style: none;    
 }
 
-.contact-nav li:not(:last-child) {
-    margin-right: 50px;
-}
-
-.contact-nav-list {
-    display: block;    
+.contact-nav-item-text {
+    display: block;
     color: #757575;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-.contact-nav-list:hover,
-.contact-nav-list:focus {
+.contact-nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact-nav-item-text:hover,
+.contact-nav-item-text:focus {
     color: var(--accentcolor);
 }
 
@@ -149,8 +151,7 @@ nav {
 
 /* Герой */
 
-.hero {
-    color: ;
+.section.hero {    
     background-color: var(--secondbgcolor);
     letter-spacing: 0.06em;
     padding-top: 200px;
@@ -163,7 +164,8 @@ nav {
     color: #FFFFFF;
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36;    
+    line-height: 1.36; 
+    letter-spacing: 0.06em;
     text-transform: uppercase;    
     display: inline-block;
     margin-top: 0px;
@@ -171,45 +173,39 @@ nav {
     margin-left: auto;
     margin-right: auto;
     width: 696px;
-    padding-left: 31px;
-    padding-right: 35px;
 }
 
 /* Секция отличия */
 
 .differences, .portfolio {
-    display: none;
+    visibility: hidden;
+    margin: 0;
 }
 
 .differences-list {
     display: flex;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 94px;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.differences-list li {
+.differences-list-item {
     flex-basis: calc(100% / 4 - 30px);
     margin-left: calc(var(--card-set-gap));
     margin-top: calc(var(--card-set-gap));
 }
 
-.differences-title {
+.differences-list-title {
     color: var(--secondtextcolor);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-top: 0px;
-    margin-bottom: 0px;
     }
 
-.differences-list p {
+.differences-list-text {
     margin-top: 10px;
 }
 
@@ -221,21 +217,21 @@ nav {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
-    text-align: center;    
-    margin-top: 0px;
+    text-align: center;
     margin-bottom: 50px;
+}
+
+.activity {
+    padding-top: 0px;
 }
 
 .activity-list {
     display: flex;
     margin-top: calc(-1 * var(--card-set-gap));
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: calc(-1 * var(--card-set-gap));    
 }
 
-.activity-list li {
+.activity-list-item {
     flex-basis: calc((100%-60)/3);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
@@ -253,11 +249,7 @@ nav {
     line-height: 1.18;
     letter-spacing: 0.03em;
     margin-top: calc(-1 * var(--card-set-gap));
-    margin-bottom: 0px;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: calc(-1 * var(--card-set-gap));    
     text-align: center;
 }
 
@@ -273,27 +265,27 @@ nav {
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-card-content {
+    padding-top: var(--card-set-gap);
+    padding-bottom: var(--card-set-gap);
+}
+
 .team-card-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
     color: var(--secondtextcolor);
-    margin-top: var(--card-set-gap);
-    margin-bottom: 0px;
 }
 
 .team-card-text {
     margin-top: 10px;
-    margin-bottom: var(--card-set-gap);
 }
 
 /* Футер */
 
 .logo.footer {
     color: var(--white);
-    margin-top: 0px;
-    margin-bottom: 0px;
     line-height: normal;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -306,22 +298,15 @@ nav {
 }
 
 address {
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
-.footer-adress {
-    list-style: none;
-    margin-top: 0px;
+.footer-adress-item:not(:first-child) {
+    margin-top:9px;
     margin-bottom: 0px;
-    padding-left: 0px;
 }
 
-.footer-adress li:not(:first-child) {
-    padding-top:9px;
-    padding-bottom: 0px;
-}
-
-.footer-adress-list {
+.footer-adress-item-text {
     font-style: normal;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -331,8 +316,8 @@ address {
     margin-bottom: 0px;
 }
 
-.footer-adress-list:hover,
-.footer-adress-list:focus {
+.footer-adress-item-text:hover,
+.footer-adress-item-text:focus {
     color: #FFFFFF;
 }
 
@@ -344,10 +329,9 @@ address {
     display: flex;    
     justify-content: center;
     margin-bottom: 50px;
-    padding: 0px;
 }
 
-.portfolio-list li:not(:last-child) {
+.portfolio-list-item:not(:last-child) {
     margin-right: 8px;
 }
 
@@ -358,8 +342,6 @@ address {
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
-    margin-bottom: 0px;
-    padding: 0px;    
     font-size: 16px;
     line-height: 1.87;
 }
@@ -372,7 +354,9 @@ address {
 
 .worklist-card-content {
     padding: 20px 24px;
-    border: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .worklist-card-title {
@@ -380,18 +364,9 @@ address {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em;
-    margin-top: 0px;
-    margin-bottom: 4px;
-    margin-left: 0px;
-    margin-right: 0px;
-    
+    letter-spacing: 0.06em;    
+    margin-bottom: 4px; 
 }
-
-.worklist-card-text {
-    margin: 0px;
-}
-
 
 /*Кнопка*/
 
@@ -416,6 +391,11 @@ address {
     padding: 10px 32px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.button.hero:hover,
+.button.hero:focus {
+    background-color: #188CE8;
 }
 
 .button.primary {
