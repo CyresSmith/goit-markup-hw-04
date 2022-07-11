@@ -22,10 +22,6 @@ h1, h2, h3, p {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 body {
     color:var(--textcolor);
     background-color:var(--white);
@@ -133,24 +129,8 @@ nav {
     list-style: none;    
 }
 
-.contact-item-icon {
-    margin-right: 10px;
-    fill: currentColor;
-}
-
-.contact-item-icon.envelope {
-    height: 12px;
-    width: 16px;
-}
-
-.contact-item-icon.smartphone {
-    height: 16px;
-    width: 10px;
-}
-
 .contact-nav-item-text {
-    display: flex;
-    align-items: center;
+    display: block;
     color: #757575;
     font-weight: 500;
     line-height: 1.14;
@@ -171,23 +151,13 @@ nav {
 
 /* Герой */
 
-.section.hero {
+.section.hero {    
+    background-color: var(--secondbgcolor);
     letter-spacing: 0.06em;
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    background-image: linear-gradient(to bottom,
-                        rgba(47, 48, 58, 0.4),
-                        rgba(47, 48, 58, 0.4)),
-                        url(/img/header-img.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #C4C4C4;
-    
+        
 }
 
 .hero-title {
@@ -218,20 +188,6 @@ nav {
     letter-spacing: 0.03em;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
-}
-
-.differences-list-item-icon-box {
-    width: 270px;
-    height: 120px;
-    padding: 25px 100px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background-color: var(--mainbgcolor);
-}
-
-.differences-list-item-icon {
-    width: 70px;
-    height: 70px;
 }
 
 .differences-list-item {
@@ -326,35 +282,6 @@ nav {
     margin-top: 10px;
 }
 
-.team-card-social-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
-    margin-left: 32px;
-    margin-right: 32px;
-}
-
-.team-card-social-links-icon-box {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 12px;
-    border-radius: 50%;
-    color: #AFB1B8;
-    cursor: pointer;
-}
-
-.team-card-social-links-icon {
-    fill: currentColor;
-}
-
-.team-card-social-links-icon-box:hover,
-.team-card-social-links-icon-box:focus {
-    background-color: var(--accentcolor);
-    color: var(--white);
-}
-
 /* Футер */
 
 .logo.footer {
@@ -368,10 +295,6 @@ nav {
     background-color: var(--secondbgcolor);
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.container.footer {
-    display: flex;
 }
 
 address {
@@ -396,24 +319,6 @@ address {
 .footer-adress-item-text:hover,
 .footer-adress-item-text:focus {
     color: #FFFFFF;
-}
-
-.social-links {
-    margin-left: 70px;
-    margin-top: 12px;
-}
-
-.social-links-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--white);
-}
-
-.social-links-list {
-    display: flex;
 }
 
 /* Портфолио */
