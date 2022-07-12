@@ -22,6 +22,19 @@ h1, h2, h3, p {
     margin: 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 body {
     color:var(--textcolor);
     background-color:var(--white);
@@ -129,9 +142,16 @@ nav {
     list-style: none;    
 }
 
-.contact-nav-item-text {
-    display: block;
+.contact-nav-item {
+    display: flex;
+    align-items: center;
     color: #757575;
+}
+
+.contact-nav-item-text {
+    display: flex;
+    align-items: center;
+    color: currentColor;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -142,17 +162,32 @@ nav {
     margin-right: 50px;
 }
 
-.contact-nav-item-text:hover,
-.contact-nav-item-text:focus {
+.contact-nav-item:hover,
+.contact-nav-item:focus {
     color: var(--accentcolor);
+}
+
+.contact-nav-item-icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* Тело */
 
 /* Герой */
 
-.section.hero {    
-    background-color: var(--secondbgcolor);
+.section.hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(to bottom,
+                                        rgba(47, 48, 58, 0.4),
+                                        rgba(47, 48, 58, 0.4)),
+                                        url(/img/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     letter-spacing: 0.06em;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -177,17 +212,22 @@ nav {
 
 /* Секция отличия */
 
-.differences, .portfolio {
-    visibility: hidden;
-    margin: 0;
-}
-
 .differences-list {
     display: flex;
     line-height: 1.71;
     letter-spacing: 0.03em;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.differences-list-icon-box {
+    background: #F5F4FA;
+    border-radius: 4px;
+    min-width: 70px;
+    width: 100%;
+    height: 120px;
+    padding: 25px calc(100% / 2 - 35px);
+    margin-bottom: 30px;
 }
 
 .differences-list-item {
@@ -282,6 +322,72 @@ nav {
     margin-top: 10px;
 }
 
+.social-links-list {
+    display: flex;
+    margin-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.social-link-item:not(:last-child) {
+    margin-right: 10px;    
+}
+
+.social-link {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+}
+
+.social-link-icon {
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--white);
+    background-color: var(--accentcolor);
+}
+
+/* Постоянные клиенты */
+
+.customers-list {
+    display: flex;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+    
+}
+
+.customers-item {    
+    flex-basis: calc(100%/6 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    height: 92px;    
+}
+
+.customers-item-link {
+    display: block;    
+    padding: 16px calc(100%/2 - 53px);
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.customers-logo {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+
+.customers-item-link:hover,
+.customers-item-link:focus {
+    color: var(--accentcolor);
+    border-color: var(--accentcolor);
+}
+
 /* Футер */
 
 .logo.footer {
@@ -295,6 +401,10 @@ nav {
     background-color: var(--secondbgcolor);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-contacts-list {
+    display: flex;
 }
 
 address {
@@ -319,6 +429,36 @@ address {
 .footer-adress-item-text:hover,
 .footer-adress-item-text:focus {
     color: #FFFFFF;
+}
+
+.join {
+    margin-top: 12px;
+    margin-left: 70px;
+}
+
+.join-title {    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;    
+    color: var(--white);
+}
+
+.social-links-list.in-footer {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.social-link.in-footer {
+    background-color:rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.social-link.in-footer:hover,
+.social-link.in-footer:focus {
+    color: var(--white);
+    background-color: var(--accentcolor);
 }
 
 /* Портфолио */
