@@ -145,26 +145,22 @@ nav {
 .contact-nav-item {
     display: flex;
     align-items: center;
-    color: #757575;
+    
 }
 
 .contact-nav-item-text {
     display: flex;
     align-items: center;
-    color: currentColor;
+    color: #757575;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    
 }
 
 .contact-nav-item:not(:last-child) {
     margin-right: 50px;
-}
-
-.contact-nav-item:hover,
-.contact-nav-item:focus {
-    color: var(--accentcolor);
 }
 
 .contact-nav-item-icon {
@@ -172,6 +168,12 @@ nav {
     margin-right: 10px;
     fill: currentColor;
 }
+
+.contact-nav-item-text:hover,
+.contact-nav-item-text:focus {
+    color: var(--accentcolor);
+}
+
 
 /* Тело */
 
@@ -490,6 +492,14 @@ address {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-top: var(--card-set-gap);
     margin-left: var(--card-set-gap);
+    
+}
+
+.worklist-card:hover,
+.worklist-card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .worklist-card-content {
