@@ -185,7 +185,7 @@ nav {
     background-image: linear-gradient(to bottom,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                        url(/img/hero-img.jpg);
+                                        url(../img/hero-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     letter-spacing: 0.06em;
